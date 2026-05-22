@@ -9,7 +9,7 @@
 - [ ] source venv/bin/activate
 - [ ] pip install -r requirements.txt
 
-This folder hosts the stripped-down GPT-2 model and a tiny toy dataset built from 10 short, potentially ambiguous sentences.
+This folder hosts the stripped-down GPT-2 model and a tiny toy dataset built from 10k short, potentially ambiguous sentences.
 
 ## What was added
 - `model.py`: minimal GPT-2 (`n_layer=2`, `n_head=3`, `n_embd=3`, `block_size=8`, weight tying).
