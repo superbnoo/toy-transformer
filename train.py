@@ -48,7 +48,7 @@ def main():
     val_loader = DataLoader(val_ds, batch_size=len(val_ds), shuffle=False) if len(val_ds) > 0 else None
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=3e-3)
-    epochs = 200
+    epochs = 50
 
     def evaluate():
         model.eval()
@@ -70,7 +70,7 @@ def main():
             _, loss = model(xb, yb)
             loss.backward()
             optimizer.step()
-        if epoch % 20 == 0 or epoch == epochs:
+        if epoch % 5 == 0 or epoch == epochs:
             val_loss = evaluate()
             if val_loss is None:
                 print(f"epoch {epoch:03d} | train_loss {loss.item():.4f}")
