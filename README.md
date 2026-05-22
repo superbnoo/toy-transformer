@@ -1,4 +1,4 @@
-# Minimal GPT-2 (toy) workflow
+# Minimal GPT-2 (toy transformer) from scratch
 ### Pre-requisite
 + python
 + vscode
@@ -104,3 +104,6 @@ graph TD
 
 ## Do we need a start-of-sentence (`<s>`/`<bos>`) token?
 - Not required for this toy setup. The model trains to predict the next token within each padded sentence and learns to emit `<eos>` at the end. If you later want explicit “begin” conditioning or longer multi-sentence streams, you could add a BOS token and include it in the vocab and inputs; the current pipeline omits it on purpose for simplicity.
+
+## References
++ [Zachary Huang - "Give me 100 min, I will make Transformer click forever"](https://www.youtube.com/watch?v=CfJ3Cxtlcps&t=3661s)
