@@ -43,7 +43,7 @@ epoch 200 | train_loss 1.0616 | val_loss 1.6558
 Saved checkpoint to /Users/vutr/05.python/00.learn/zachary/gpt-2/data/gpt2_minimal.pt
 ```
 - generate:
-  - `python generate.py --prompt "child" --max-new 5 --temperature 0.7 --top-k 5`
+  - `python generate.py --max-new 5 --temperature 0.7 --top-k 5`
 ```
 Prompt tokens: ['child']
 Prompt ids: tensor([[24]])
