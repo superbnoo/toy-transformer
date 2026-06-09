@@ -44,14 +44,48 @@ Saved checkpoint to /Users/vutr/05.python/00.learn/zachary/gpt-2/data/gpt2_minim
 ```
 - generate:
   - `python generate.py --max-new 5 --temperature 0.7 --top-k 5`
+
+Example run:
 ```
-Prompt tokens: ['child']
-Prompt ids: tensor([[24]])
-Generated token ids: tensor([[24, 98, 94, 93, 82,  0]])
-Raw decoded tokens: ['child', 'walks', 'to', 'the', 'school', '<eos>']
-Raw decoded text: child walks to the school <eos>
-Truncated at <eos> tokens: ['child', 'walks', 'to', 'the', 'school']
-Truncated text: child walks to the school
+python generate.py --max-new 5 --temperature 0.7 --top-k 5
+Model loaded.
+Enter a prompt (Ctrl+C to exit)
+
+> child walks
+Prompt tokens: ['child', 'walks']
+Prompt ids: tensor([[24, 98]])
+
+Sample 1/1
+Generated token ids: tensor([[24, 98, 94, 93, 70,  0,  0]])
+Raw decoded tokens: ['child', 'walks', 'to', 'the', 'park', '<eos>', '<eos>']
+Raw decoded text: child walks to the park <eos> <eos>
+Truncated at <eos> tokens: ['child', 'walks', 'to', 'the', 'park']
+Truncated text: child walks to the park
+
+> bird
+Prompt tokens: ['bird']
+Prompt ids: tensor([[10]])
+
+Sample 1/1
+Generated token ids: tensor([[10, 86, 56, 93, 70,  0]])
+Raw decoded tokens: ['bird', 'sings', 'in', 'the', 'park', '<eos>']
+Raw decoded text: bird sings in the park <eos>
+Truncated at <eos> tokens: ['bird', 'sings', 'in', 'the', 'park']
+Truncated text: bird sings in the park
+
+> teacher
+Prompt tokens: ['teacher']
+Prompt ids: tensor([[92]])
+
+Sample 1/1
+Generated token ids: tensor([[92, 98, 94, 93, 53,  0]])
+Raw decoded tokens: ['teacher', 'walks', 'to', 'the', 'home', '<eos>']
+Raw decoded text: teacher walks to the home <eos>
+Truncated at <eos> tokens: ['teacher', 'walks', 'to', 'the', 'home']
+Truncated text: teacher walks to the home
+
+> ^C
+Exiting...
 ```
 
 ## Current toy config (train.py)
